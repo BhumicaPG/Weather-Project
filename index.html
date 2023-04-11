@@ -1,14 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Weather Project</title>
-</head>
-<body>
-    <form action="/" method="post">
-        <label>City Name : 
-        <input type="text" name="cityName"></label>
-        <button type="submit">Go</button>
-    </form>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherProject</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=PT+Sans&family=Sacramento&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/e7d220cfad.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      body {
+        padding-top: 200px;
+        text-align: center;
+        background-image: url("https://img.freepik.com/free-photo/lonely-meadow-with-sky-background_1160-299.jpg?w=900&t=st=1680504583~exp=1680505183~hmac=d0e4f97dd52ca8e5bc126cd3e8ce13e0f1d05e521db085a1963d527e6a1f56dc");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+      .bhumi {
+        position: relative;
+        animation: mymove 0.5s 1;
+      }
+
+      .top {
+        width: 30%;
+        margin-bottom: 10px;
+        background: none;
+        outline: none;
+        border: solid black 1px;
+        position: relative;
+        animation: mymove 1.5s 1;
+      }
+      h1 {
+        font-family: "Merriweather", serif;
+        position: relative;
+        animation: mymove 2.5s 1;
+      }
+      img {
+        margin-bottom: 10px;
+        position: relative;
+        animation: mymove 3.5s 1;
+      }
+      @keyframes mymove {
+        from {
+          left: -200px;
+        }
+        to {
+          left: 0px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bhumica">
+      <form action="/" method="post">
+        <i class="fa-solid fa-cloud-sun-rain fa-4x" style="color: #1e2f4d"></i>
+        <br />
+        <h1>Weather Project</h1>
+        <!-- <label for="cityInput">City name :</label> -->
+        <input
+          class="btn form-control top"
+          type="text"
+          name="cityName"
+          placeholder="City Name"
+        /><br />
+        <button class="btn btn-lg btn-success bhumi" type="submit">
+          Check Weather Conditions
+        </button>
+        <p class="mt-5 mb-3 text-muted">&copy; bhumica</p>
+      </form>
+    </div>
+  </body>
 </html>
